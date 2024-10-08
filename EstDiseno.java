@@ -1,3 +1,5 @@
+import java.util.regex.*;
+
 public class EstDiseno{
     private String Cedula;
     private String nombre;
@@ -10,7 +12,15 @@ public class EstDiseno{
         return Cedula;
     }
     public void setCedula(String cedula) {
-        Cedula = cedula;
+        String regex = "^[a-zA-Z0-9]*$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(cedula);
+
+        if (matcher.matches()) {
+            Cedula = cedula;
+        } else {
+            System.out.println("El texto contiene caracteres especiales.");
+        
     }
     public String getNombre() {
         return nombre;
