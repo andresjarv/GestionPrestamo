@@ -43,6 +43,10 @@ public class EstDiseno{
         CantAsignatura = cantAsignatura;
     }
 
+    public void prueba(){
+
+    }
+
      
 
 }
