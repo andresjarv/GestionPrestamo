@@ -1,62 +1,72 @@
 import java.util.regex.*;
 
 public class EstDiseno{
-    private String Cedula;
+    private String cedula;
     private String nombre;
-    private String Apellido;
+    private String apellido;
     private String telefono;
-    private String ModEstudio;
-    private int CantAsignatura;//Asignaturas que esta viendo este semestre
+    private String modEstudio;
+    private int cantAsignatura;//Asignaturas que esta viendo este semestre
     
-    public String getCedula() {
-        return Cedula;
+    public EstDiseno() {
     }
-    public void setCedula(String cedula) {
-        String regex = "^[a-zA-Z0-9]*$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(cedula);
 
-        if (matcher.matches()) {
-            Cedula = cedula;
-        } else {
-            System.out.println("El texto contiene caracteres especiales.");
-        
+    public EstDiseno(String cedula, String nombre, String apellido, String telefono, String modEstudio,
+            int cantAsignatura) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.modEstudio = modEstudio;
+        this.cantAsignatura = cantAsignatura;
     }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
+
     public void setApellido(String apellido) {
-        Apellido = apellido;
+        this.apellido = apellido;
     }
+
     public String getTelefono() {
         return telefono;
     }
+
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
     public String getModEstudio() {
-        return ModEstudio;
+        return modEstudio;
     }
+
     public void setModEstudio(String modEstudio) {
-        ModEstudio = modEstudio;
+        this.modEstudio = modEstudio;
     }
+
     public int getCantAsignatura() {
-        return CantAsignatura;
+        return cantAsignatura;
     }
+
     public void setCantAsignatura(int cantAsignatura) {
-        CantAsignatura = cantAsignatura;
+        this.cantAsignatura = cantAsignatura;
     }
-
-    public void prueba(){
-
-    }
-
-     
-
+   
 }
