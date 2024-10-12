@@ -1,4 +1,4 @@
-public class Metodos {
+public class MetodosInge {
     
 
     public String RegistrarEquipos(){

@@ -20,7 +20,7 @@ public class PrincipalMenu {
                 case 1:
                     //Estudiante ingenieria
                     while(opt1 != 5){
-                        System.out.println("\t Que desea hacer \t"+
+                        System.out.println("\n\t Que desea hacer \t\n"+
                                     "1 Registrar préstamo de equipo.\n"+
                                     "2 Modificar prestamo del equipo (Serial o Cedula).\n"+
                                     "3 Devolucion del equipo (Serial o Cedula).\n"+
@@ -60,13 +60,13 @@ public class PrincipalMenu {
                 case 2:
                     //Estudiante Diseño
                     while(opt2 != 5){
-                        System.out.println("\t Que desea hacer \t"+
+                        System.out.println("\n\t Que desea hacer \t\n"+
                                     "1 Registrar préstamo de equipo.\n"+
                                     "2 Modificar prestamo del equipo (Serial o Cedula).\n"+
                                     "3 Devolucion del equipo (Serial o Cedula).\n"+
                                     "4 Buscar equipo (Serial o Cedula).\n"+
                                     "5 volver al menú principal.");
-                        opt1 = sc.nextInt();
+                        opt2 = sc.nextInt();
                         
                         switch (opt2) {
                             case 1:
@@ -102,7 +102,7 @@ public class PrincipalMenu {
                     break;
                     
                 case 4:
-                    System.out.println("------\tSaliendo del programa, Gracias por usar nuestro servicio.\t------");
+                    System.out.println("\n------\tSaliendo del programa, Gracias por usar nuestro servicio.\t------\n");
                     break;
             
                 default:

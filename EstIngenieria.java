@@ -1,56 +1,80 @@
 public class EstIngenieria{
-    private String Cedula;
+    private String cedula;
     private String nombre;
-    private String Apellido;
+    private String apellido;
     private String telefono;
     private int semestre;
-    private float PromAcum;
-    private String Serial;
+    private float promAcum;
+    private String serial;
     
+    public EstIngenieria() {
+    }
+
+    public EstIngenieria(String cedula, String nombre, String apellido, String telefono, int semestre, float promAcum,
+            String serial) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.semestre = semestre;
+        this.promAcum = promAcum;
+        this.serial = serial;
+    }
+
     public String getCedula() {
-        return Cedula;
+        return cedula;
     }
+
     public void setCedula(String cedula) {
-        Cedula = cedula;
+        this.cedula = cedula;
     }
+
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
+
     public void setApellido(String apellido) {
-        Apellido = apellido;
+        this.apellido = apellido;
     }
+
     public String getTelefono() {
         return telefono;
     }
+
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
     public int getSemestre() {
         return semestre;
     }
+
     public void setSemestre(int semestre) {
         this.semestre = semestre;
     }
+
     public float getPromAcum() {
-        return PromAcum;
+        return promAcum;
     }
+
     public void setPromAcum(float promAcum) {
-        PromAcum = promAcum;
+        this.promAcum = promAcum;
     }
+
     public String getSerial() {
-        return Serial;
+        return serial;
     }
+
     public void setSerial(String serial) {
-        Serial = serial;
+        this.serial = serial;
     }
-
-    
-
     
 }
