@@ -1,56 +1,12 @@
 public class EstIngenieria{
-    private String cedula;
-    private String nombre;
-    private String apellido;
-    private String telefono;
     private int semestre;
-    private float promAcum;
-    private String serial;
+    private float promAcum;    
     
-    public EstIngenieria() {
-    }
 
-    public EstIngenieria(String cedula, String nombre, String apellido, String telefono, int semestre, float promAcum,
-            String serial) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
+
+    public EstIngenieria(int semestre, float promAcum) {
         this.semestre = semestre;
         this.promAcum = promAcum;
-        this.serial = serial;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 
     public int getSemestre() {
@@ -69,12 +25,5 @@ public class EstIngenieria{
         this.promAcum = promAcum;
     }
 
-    public String getSerial() {
-        return serial;
-    }
-
-    public void setSerial(String serial) {
-        this.serial = serial;
-    }
-    
+   
 }
