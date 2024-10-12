@@ -1,4 +1,4 @@
-public class EstIngenieria{
+public class EstIngenieria extends Estudiante{
     private int semestre;
     private float promAcum;    
     
