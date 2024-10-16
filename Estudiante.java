@@ -3,7 +3,15 @@ public class Estudiante {
     private String nombre;
     private String apellido;
     private String telefono;
-    private String serial;
+    private String serial;    
+
+    public Estudiante(String cedula, String nombre, String apellido, String telefono, String serial) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.serial = serial;
+    }
     public String getCedula() {
         return cedula;
     }
