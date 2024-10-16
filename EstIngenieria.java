@@ -1,8 +1,8 @@
 public class EstIngenieria extends Estudiante{
     private int semestre;
-    private float promAcum;       
+    private Double promAcum;       
 
-    public EstIngenieria(String cedula,String nombre,String apellido,String telefono,String serial,int semestre, float promAcum) {
+    public EstIngenieria(String cedula,String nombre,String apellido,String telefono,String serial,int semestre, Double promAcum) {
         super(cedula, nombre, apellido, telefono, serial);
         this.semestre = semestre;
         this.promAcum = promAcum;
@@ -16,11 +16,11 @@ public class EstIngenieria extends Estudiante{
         this.semestre = semestre;
     }
 
-    public float getPromAcum() {
+    public double getPromAcum() {
         return promAcum;
     }
 
-    public void setPromAcum(float promAcum) {
+    public void setPromAcum(Double promAcum) {
         this.promAcum = promAcum;
     }
 
