@@ -1,35 +1,12 @@
-public class Laptop {
-    private String Serial;
-    private String Marca;
-    private float Tamaño;
-    private float Precio;
+public class Laptop extends Dispositivo {
+    
     private String Almacenamiento;
     private float Peso;
-    
-    
-    public String getSerial() {
-        return Serial;
-    }
-    public void setSerial(String serial) {
-        Serial = serial;
-    }
-    public String getMarca() {
-        return Marca;
-    }
-    public void setMarca(String marca) {
-        Marca = marca;
-    }
-    public float getTamaño() {
-        return Tamaño;
-    }
-    public void setTamaño(float tamaño) {
-        Tamaño = tamaño;
-    }
-    public float getPrecio() {
-        return Precio;
-    }
-    public void setPrecio(float precio) {
-        Precio = precio;
+   
+    public Laptop(String serial, String marca, float tamaño, float precio, String almacenamiento, float peso) {
+        super(serial, marca, tamaño, precio);
+        Almacenamiento = almacenamiento;
+        Peso = peso;
     }
     public String getAlmacenamiento() {
         return Almacenamiento;

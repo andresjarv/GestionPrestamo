@@ -1,10 +1,9 @@
 public class EstIngenieria extends Estudiante{
     private int semestre;
-    private float promAcum;    
-    
+    private float promAcum;       
 
-
-    public EstIngenieria(int semestre, float promAcum) {
+    public EstIngenieria(String cedula,String nombre,String apellido,String telefono,String serial,int semestre, float promAcum) {
+        super(cedula, nombre, apellido, telefono, serial);
         this.semestre = semestre;
         this.promAcum = promAcum;
     }
