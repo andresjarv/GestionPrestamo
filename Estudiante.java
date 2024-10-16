@@ -43,7 +43,14 @@ public class Estudiante {
         this.serial = serial;
     }
 
-    
+    public String MostrarEstudiante() {
+        String mensaje = "Cedula: " + cedula + "\n" +
+                "Nombre: " + nombre + "\n" +
+                "Apellido: " + apellido + "\n" +
+                "Telefono: " + telefono + "\n" +
+                "serial: " +serial;
+        return mensaje;
+
 
     
     

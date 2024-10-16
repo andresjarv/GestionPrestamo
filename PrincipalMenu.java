@@ -1,8 +1,11 @@
+import java.util.LinkedList;
 import java.util.Scanner;
 public class PrincipalMenu {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Metodos m = new Metodos();
+        LinkedList<Estudiante> lista = new LinkedList<>();
 
         int opt = 0;
         int opt1 = 0;
@@ -30,10 +33,14 @@ public class PrincipalMenu {
                         
                         switch (opt1) {
                             case 1:
+                                lista = m.LlenarListaEstudiante(lista);
                                 //Registrar equipo
+
                                 break;
 
                             case 2:
+                                //mostrar
+                                m.MostrarListaEstudiante(lista);
                                 //Modificar equipo
                                 break;
                             
