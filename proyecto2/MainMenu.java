@@ -219,7 +219,7 @@ public class MainMenu {
                 writer.println("EstudianteIngenieria," + estudiante.getCedula() + "," + estudiante.getNombre() + "," + estudiante.getApellido() + "," + estudiante.getTelefono() + "," + estudiante.getNumeroSemestre() + "," + estudiante.getPromedioAcumulado() + "," + estudiante.getSerial());
             }
             for (EstudianteDiseno estudiante : listaEstudiantesDiseno) {
-                writer.println("EstudianteDiseno," + estudiante.getCedula() + "," + estudiante.getNombre() + "," + estudiante.getApellido() + "," + estudiante.getTelefono() + "," + estudiante.getSerial() + "," + estudiante.getModalidadEstudio() + "," + estudiante.getCantidadAsignaturas());
+                writer.println("EstudianteDiseno," + estudiante.getCedula() + "," + estudiante.getNombre() + "," + estudiante.getApellido() + "," + estudiante.getTelefono()  + "," + estudiante.getModalidadEstudio() + "," + estudiante.getCantidadAsignaturas() + ","+estudiante.getSerial());
             }
             writer.flush();
         } catch (IOException e) {

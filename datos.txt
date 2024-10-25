@@ -1,0 +1,4 @@
+Laptop,1,HP,17.0,2000000.0,11,INTEL
+Tableta,1,lENOVO,6.0,12345.0,1,1.0
+EstudianteIngenieria,1020104717,Alejandro,Gutierrez,3216860801,5,4.8,1
+EstudianteDiseno,123456789,Jorge,Vidal,321456987,Presencial,5,1

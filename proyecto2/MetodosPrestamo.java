@@ -242,7 +242,7 @@ public class MetodosPrestamo {
         for (EstudianteDiseno estudianteDiseno : listaDiseno) {
             inventario.append(estudianteDiseno.toString()).append("\n");
         }
-        inventario.append("\nTabletas:\n");
+        inventario.append("\nEstudiantes de Ingeniería:\n");
         for (EstudianteIngenieria estudianteIngenieria:listaIngenieria ) {
             inventario.append(estudianteIngenieria.toString()).append("\n");
         }
