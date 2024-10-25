@@ -1,4 +1,3 @@
-import java.util.regex.Pattern;
 
 public class EstudianteDiseno {
     private String cedula;
@@ -98,5 +97,14 @@ public class EstudianteDiseno {
 
     private boolean validarTextoSinNumerosNiCaracteresEspeciales(String texto) {
         return texto.matches("[a-zA-Z]+");
+    }
+    @Override
+    public String toString() {
+        return  "Cedula: '" + cedula + '\'' +
+                ", Nombre: '" + nombre + '\'' +
+                ", Apellido:" + apellido +
+                ", Telefono: " + telefono +
+                ", Modalidad de Estudio: '" + modalidadEstudio + '\'' +
+                ", Cantidad Asignaturas: '" + cantidadAsignaturas + '\'';
     }
 }

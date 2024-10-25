@@ -23,8 +23,10 @@ public class MetodosPrestamo {
 
     public String registrarEstudiante(LinkedList<EstudianteIngenieria> estudiantesIngenieria, LinkedList<EstudianteDiseno> estudiantesDiseno) {
         String registrar = "";
-        String tipo = JOptionPane.showInputDialog("Ingrese el tipo de estudiante (Ingeniería/ Diseño):").toLowerCase();
-        if (tipo.equals("ingenieria")) {
+        
+        String tipo = JOptionPane.showInputDialog("Ingrese el tipo de estudiante (1. Ingeniería/ 2. Diseño):");
+        
+        if (tipo.equals("1")) {
             String cedula = JOptionPane.showInputDialog("Ingrese la cédula del estudiante:");
             validarTexto(cedula, "cedula");
             String nombre = JOptionPane.showInputDialog("Ingrese el nombre del estudiante:");
@@ -39,7 +41,7 @@ public class MetodosPrestamo {
 
             estudiantesIngenieria.add(new EstudianteIngenieria(cedula, nombre, apellido, telefono, semestre, promedio, serial));
             registrar = ("Estudiante de ingeniería registrado exitosamente.");
-        } else if (tipo.equals("diseño")) {
+        } else if (tipo.equals("2")) {
             String cedula = JOptionPane.showInputDialog("Ingrese la cédula del estudiante:");
             validarTexto(cedula, "cedula");
             String nombre = JOptionPane.showInputDialog("Ingrese el nombre del estudiante:");
@@ -127,8 +129,8 @@ public class MetodosPrestamo {
     }
 
     public void registrarEquipo(LinkedList<Laptop> listaLaptops, LinkedList<Tableta> listaTabletas) {
-        String tipo = JOptionPane.showInputDialog("Ingrese el tipo de equipo (Laptop/ Tableta):").toLowerCase();
-        if (tipo.equals("laptop")) {
+        String tipo = JOptionPane.showInputDialog("Ingrese el tipo de equipo (1. Laptop/ 2. Tableta):").toLowerCase();
+        if (tipo.equals("1")) {
             String serial = JOptionPane.showInputDialog("Ingrese el serial de la laptop:");
             //validarTexto(serial, "serial");
             String marca = JOptionPane.showInputDialog("Ingrese la marca de la laptop:");
@@ -140,7 +142,7 @@ public class MetodosPrestamo {
 
             listaLaptops.add(new Laptop(serial, marca, tamano, precio, sistemaOperativo, procesador));
             JOptionPane.showMessageDialog(null, "Laptop registrada exitosamente.");
-        } else if (tipo.equals("tableta")) {
+        } else if (tipo.equals("2")) {
             String serial = JOptionPane.showInputDialog("Ingrese el serial de la tableta:");
             //validarTexto(serial, "serial");
             String marca = JOptionPane.showInputDialog("Ingrese la marca de la tableta:");

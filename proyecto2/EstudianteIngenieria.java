@@ -104,13 +104,12 @@ public class EstudianteIngenieria {
     }
      @Override
     public String toString() {
-        return "EstudianteIngenieria{" +
-                "Cedula ='" + cedula + '\'' +
-                ", Nombre ='" + nombre + '\'' +
-                ", Apellido =" + apellido +
-                ", Telefono =" + telefono +
-                ", Semestre ='" + numeroSemestre + '\'' +
-                ", Promedio Acumulado='" + promedioAcumulado + '\'' +
+        return  "Cedula: '" + cedula + '\'' +
+                ", Nombre: '" + nombre + '\'' +
+                ", Apellido:" + apellido +
+                ", Telefono: " + telefono +
+                ", Semestre: '" + numeroSemestre + '\'' +
+                ", Promedio Acumulado: '" + promedioAcumulado + '\'' +
                 '}';
     }
 }
