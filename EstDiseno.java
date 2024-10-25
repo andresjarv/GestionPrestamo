@@ -21,7 +21,5 @@ public class EstDiseno extends Estudiante{
     }
     public void setCantAsignatura(int cantAsignatura) {
         this.cantAsignatura = cantAsignatura;
-    }
-    
-   
+    }  
 }

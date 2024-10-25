@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.util.LinkedList;
+import javax.swing.*;
 
 public class MetodosPrestamo {
 
@@ -231,6 +231,18 @@ public class MetodosPrestamo {
         inventario.append("\nTabletas:\n");
         for (Tableta tableta : listaTabletas) {
             inventario.append(tableta.toString()).append("\n");
+        }
+        JOptionPane.showMessageDialog(null, inventario.toString());
+    }
+
+    public void imprimirEstudiantes(LinkedList<EstudianteDiseno> listaDiseno, LinkedList<EstudianteIngenieria> listaIngenieria) {
+        StringBuilder inventario = new StringBuilder("Estudiantes Registrados:\n\nEstudiantes de diseño:\n");
+        for (EstudianteDiseno estudianteDiseno : listaDiseno) {
+            inventario.append(estudianteDiseno.toString()).append("\n");
+        }
+        inventario.append("\nTabletas:\n");
+        for (EstudianteIngenieria estudianteIngenieria:listaIngenieria ) {
+            inventario.append(estudianteIngenieria.toString()).append("\n");
         }
         JOptionPane.showMessageDialog(null, inventario.toString());
     }

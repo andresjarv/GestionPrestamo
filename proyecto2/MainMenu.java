@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.util.LinkedList;
+import javax.swing.*;
 
 public class MainMenu {
 
@@ -133,7 +133,7 @@ public class MainMenu {
                     metodos.modificarEstudiante(listaEstudiantesIngenieria, listaEstudiantesDiseno);
                     break;
                 case 3:
-                    metodos.buscarEstudiante(listaEstudiantesIngenieria, listaEstudiantesDiseno);
+                    metodos.imprimirEstudiantes(listaEstudiantesDiseno, listaEstudiantesIngenieria);
                     break;
                 case 4:
                     metodos.eliminarEstudiante(listaEstudiantesIngenieria, listaEstudiantesDiseno);
