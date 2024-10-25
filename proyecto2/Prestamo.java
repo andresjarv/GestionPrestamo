@@ -2,7 +2,7 @@ public class Prestamo {
     private Equipo equipo;
     private String fechaPrestamo;
     private String fechaDevolucion;
-    private int valor;
+    
 
     public Prestamo(Equipo equipo, String fechaPrestamo, String fechaDevolucion) {
         this.equipo = equipo;
