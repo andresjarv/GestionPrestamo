@@ -4,23 +4,27 @@ import java.util.LinkedList;
 public class MetodosPrestamo {
 
     private static void validarTexto(String texto, String tipo) {
-        if (tipo.equals("cedula") && !texto.matches("\\w+")) {
-            throw new IllegalArgumentException("La cédula no debe contener caracteres especiales.");
-        }
-        if (!texto.matches("[A-Za-z\\s]+")) {
-            throw new IllegalArgumentException("El " + tipo + " no debe contener números ni caracteres especiales.");
+        if (tipo.equals("cedula") || tipo.equals("telefono")) {
+            if (!texto.matches("\\d+") || texto.length() > 20) {
+                throw new IllegalArgumentException(tipo + " debe contener solo números y no más de 20 dígitos.");
+            }
+        } else {
+            if (!texto.matches("[A-Za-z\\s]+")) {
+                throw new IllegalArgumentException("El " + tipo + " no debe contener números ni caracteres especiales.");
+            }
         }
     }
-
+    
     private static void validarTelefono(String telefono) {
-        if (!telefono.matches("\\w+")) {
-            throw new IllegalArgumentException("El teléfono no debe contener caracteres especiales.");
+        if (!telefono.matches("\\d+") || telefono.length() > 20) {
+            throw new IllegalArgumentException("El teléfono debe contener solo números y no más de 20 dígitos.");
         }
     }
 
-    public void registrarEstudiante(LinkedList<EstudianteIngenieria> estudiantesIngenieria, LinkedList<EstudianteDiseno> estudiantesDiseno) {
+    public String registrarEstudiante(LinkedList<EstudianteIngenieria> estudiantesIngenieria, LinkedList<EstudianteDiseno> estudiantesDiseno) {
+        String registrar = "";
         String tipo = JOptionPane.showInputDialog("Ingrese el tipo de estudiante (Ingeniería/ Diseño):").toLowerCase();
-        if (tipo.equals("ingeniería")) {
+        if (tipo.equals("ingenieria")) {
             String cedula = JOptionPane.showInputDialog("Ingrese la cédula del estudiante:");
             validarTexto(cedula, "cedula");
             String nombre = JOptionPane.showInputDialog("Ingrese el nombre del estudiante:");
@@ -34,7 +38,7 @@ public class MetodosPrestamo {
             String serial = JOptionPane.showInputDialog("Ingrese el serial del estudiante:");
 
             estudiantesIngenieria.add(new EstudianteIngenieria(cedula, nombre, apellido, telefono, semestre, promedio, serial));
-            JOptionPane.showMessageDialog(null, "Estudiante de ingeniería registrado exitosamente.");
+            registrar = ("Estudiante de ingeniería registrado exitosamente.");
         } else if (tipo.equals("diseño")) {
             String cedula = JOptionPane.showInputDialog("Ingrese la cédula del estudiante:");
             validarTexto(cedula, "cedula");
@@ -49,10 +53,11 @@ public class MetodosPrestamo {
             String serial = JOptionPane.showInputDialog("Ingrese el serial del estudiante:");
 
             estudiantesDiseno.add(new EstudianteDiseno(cedula, nombre, apellido, telefono, modalidad, cantidadAsignaturas, serial));
-            JOptionPane.showMessageDialog(null, "Estudiante de diseño registrado exitosamente.");
+            registrar = ("Estudiante de diseño registrado exitosamente.");
         } else {
             JOptionPane.showMessageDialog(null, "Tipo de estudiante no válido.");
         }
+        return registrar;
     }
 
     public void modificarEstudiante(LinkedList<EstudianteIngenieria> estudiantesIngenieria, LinkedList<EstudianteDiseno> estudiantesDiseno) {
@@ -64,8 +69,8 @@ public class MetodosPrestamo {
                 estudiante.setNombre(JOptionPane.showInputDialog("Ingrese el nuevo nombre del estudiante:"));
                 estudiante.setApellido(JOptionPane.showInputDialog("Ingrese el nuevo apellido del estudiante:"));
                 estudiante.setTelefono(JOptionPane.showInputDialog("Ingrese el nuevo teléfono del estudiante:"));
-                estudiante.setSemestre(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el nuevo número de semestre:")));
-                estudiante.setPromedio(Float.parseFloat(JOptionPane.showInputDialog("Ingrese el nuevo promedio acumulado:")));
+                estudiante.setNumeroSemestre(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el nuevo número de semestre:")));
+                estudiante.setPromedioAcumulado(Float.parseFloat(JOptionPane.showInputDialog("Ingrese el nuevo promedio acumulado:")));
                 encontrado = true;
                 JOptionPane.showMessageDialog(null, "Estudiante de ingeniería modificado exitosamente.");
                 break;
@@ -125,9 +130,9 @@ public class MetodosPrestamo {
         String tipo = JOptionPane.showInputDialog("Ingrese el tipo de equipo (Laptop/ Tableta):").toLowerCase();
         if (tipo.equals("laptop")) {
             String serial = JOptionPane.showInputDialog("Ingrese el serial de la laptop:");
-            validarTexto(serial, "serial");
+            //validarTexto(serial, "serial");
             String marca = JOptionPane.showInputDialog("Ingrese la marca de la laptop:");
-            validarTexto(marca, "marca");
+            //validarTexto(marca, "marca");
             float tamano = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el tamaño de la laptop (pulgadas):"));
             float precio = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el precio de la laptop:"));
             String sistemaOperativo = JOptionPane.showInputDialog("Seleccione el sistema operativo (Windows 7, Windows 10, Windows 11):");
@@ -137,9 +142,9 @@ public class MetodosPrestamo {
             JOptionPane.showMessageDialog(null, "Laptop registrada exitosamente.");
         } else if (tipo.equals("tableta")) {
             String serial = JOptionPane.showInputDialog("Ingrese el serial de la tableta:");
-            validarTexto(serial, "serial");
+            //validarTexto(serial, "serial");
             String marca = JOptionPane.showInputDialog("Ingrese la marca de la tableta:");
-            validarTexto(marca, "marca");
+            //validarTexto(marca, "marca");
             float tamano = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el tamaño de la tableta (pulgadas):"));
             float precio = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el precio de la tableta:"));
             String almacenamiento = JOptionPane.showInputDialog("Seleccione el almacenamiento (256 GB, 512 GB, 1 TB):");

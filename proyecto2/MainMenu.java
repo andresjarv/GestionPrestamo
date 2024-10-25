@@ -127,7 +127,7 @@ public class MainMenu {
 
             switch (opcionGestionEstudiantes) {
                 case 1:
-                    metodos.registrarEstudiante(listaEstudiantesIngenieria, listaEstudiantesDiseno);
+                JOptionPane.showMessageDialog(null, metodos.registrarEstudiante(listaEstudiantesIngenieria, listaEstudiantesDiseno));
                     break;
                 case 2:
                     metodos.modificarEstudiante(listaEstudiantesIngenieria, listaEstudiantesDiseno);
