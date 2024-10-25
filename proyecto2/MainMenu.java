@@ -1,3 +1,8 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedList;
 import javax.swing.*;
 
@@ -10,6 +15,7 @@ public class MainMenu {
 
     public static void main(String[] args) {
         MetodosPrestamo metodos = new MetodosPrestamo();
+        importarDatos(metodos);
         int opcionPrincipal;
 
         do {
@@ -39,6 +45,7 @@ public class MainMenu {
                     menuGestionEquipos(metodos);
                     break;
                 case 6:
+                    exportarDatos(metodos);
                     JOptionPane.showMessageDialog(null, "Saliendo del programa...");
                     break;
                 default:
@@ -178,4 +185,46 @@ public class MainMenu {
             }
         } while (opcionGestionEquipos != 5);
     }
+
+    private static void importarDatos(MetodosPrestamo metodos) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("datos.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+                // Lógica para importar datos según el tipo de línea
+                if (data[0].equals("Laptop")) {
+                    listaLaptops.add(new Laptop(data[1], data[2], Float.parseFloat(data[3]), Float.parseFloat(data[4]), data[5], data[6]));
+                } else if (data[0].equals("Tableta")) {
+                    listaTabletas.add(new Tableta(data[1], data[2], Float.parseFloat(data[3]), Float.parseFloat(data[4]), data[5], Float.parseFloat(data[6])));
+                } else if (data[0].equals("EstudianteIngenieria")) {
+                    listaEstudiantesIngenieria.add(new EstudianteIngenieria(data[1], data[2], data[3], data[4], Integer.parseInt(data[5]), Float.parseFloat(data[6]), data[7]));
+                } else if (data[0].equals("EstudianteDiseno")) {
+                    listaEstudiantesDiseno.add(new EstudianteDiseno(data[1], data[2], data[3], data[4], data[5], Integer.parseInt(data[6]), data[7]));
+                }
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error al importar datos: " + e.getMessage());
+        }
+    }
+
+    private static void exportarDatos(MetodosPrestamo metodos) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("datos.txt"))) {
+            for (Laptop laptop : listaLaptops) {
+                writer.println("Laptop," + laptop.getSerial() + "," + laptop.getMarca() + "," + laptop.getTamano() + "," + laptop.getPrecio() + "," + laptop.getSistemaOperativo() + "," + laptop.getProcesador());
+            }
+            for (Tableta tableta : listaTabletas) {
+                writer.println("Tableta," + tableta.getSerial() + "," + tableta.getMarca() + "," + tableta.getTamano() + "," + tableta.getPrecio() + "," + tableta.getAlmacenamiento() + "," + tableta.getPeso());
+            }
+            for (EstudianteIngenieria estudiante : listaEstudiantesIngenieria) {
+                writer.println("EstudianteIngenieria," + estudiante.getCedula() + "," + estudiante.getNombre() + "," + estudiante.getApellido() + "," + estudiante.getTelefono() + "," + estudiante.getNumeroSemestre() + "," + estudiante.getPromedioAcumulado() + "," + estudiante.getSerial());
+            }
+            for (EstudianteDiseno estudiante : listaEstudiantesDiseno) {
+                writer.println("EstudianteDiseno," + estudiante.getCedula() + "," + estudiante.getNombre() + "," + estudiante.getApellido() + "," + estudiante.getTelefono() + "," + estudiante.getSerial() + "," + estudiante.getModalidadEstudio() + "," + estudiante.getCantidadAsignaturas());
+            }
+            writer.flush();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error al exportar datos: " + e.getMessage());
+        }
+    }
 }
+
