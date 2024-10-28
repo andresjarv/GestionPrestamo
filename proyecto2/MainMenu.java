@@ -59,11 +59,11 @@ public class MainMenu {
 
         do {
             String menuIngenieria = "ESTUDIANTES DE INGENIERÍA\n\n"
-                    + "1.1 Registrar préstamo de equipo\n"
-                    + "1.2 Modificar préstamo de equipo (Por serial o cédula)\n"
-                    + "1.3 Devolución de equipo (Por serial o cédula)\n"
-                    + "1.4 Buscar equipo (Por serial o cédula)\n"
-                    + "1.5 Volver al menú principal";
+                    + "1. Registrar préstamo de equipo\n"
+                    + "2. Modificar préstamo de equipo (Por serial o cédula)\n"
+                    + "3. Devolución de equipo (Por serial o cédula)\n"
+                    + "4. Buscar equipo (Por serial o cédula)\n"
+                    + "5. Volver al menú principal";
             opcionIngenieria = Integer.parseInt(JOptionPane.showInputDialog(menuIngenieria));
 
             switch (opcionIngenieria) {
@@ -92,11 +92,11 @@ public class MainMenu {
 
         do {
             String menuDiseno = "ESTUDIANTES DE DISEÑO\n\n"
-                    + "2.1 Registrar préstamo de equipo\n"
-                    + "2.2 Modificar préstamo de equipo (Por serial o cédula)\n"
-                    + "2.3 Devolución de equipo (Por serial o cédula)\n"
-                    + "2.4 Buscar equipo (Por serial o cédula)\n"
-                    + "2.5 Volver al menú principal";
+                    + "1. Registrar préstamo de equipo\n"
+                    + "2. Modificar préstamo de equipo (Por serial o cédula)\n"
+                    + "3. Devolución de equipo (Por serial o cédula)\n"
+                    + "4. Buscar equipo (Por serial o cédula)\n"
+                    + "5. Volver al menú principal";
             opcionDiseno = Integer.parseInt(JOptionPane.showInputDialog(menuDiseno));
 
             switch (opcionDiseno) {
@@ -125,11 +125,11 @@ public class MainMenu {
 
         do {
             String menuEstudiantes = "GESTIÓN DE ESTUDIANTES\n\n"
-                    + "4.1 Registrar Estudiante\n"
-                    + "4.2 Modificar Estudiante\n"
-                    + "4.3 Buscar Estudiante\n"
-                    + "4.4 Eliminar Estudiante\n"
-                    + "4.5 Volver al menú principal";
+                    + "1. Registrar Estudiante\n"
+                    + "2. Modificar Estudiante\n"
+                    + "3. Buscar Estudiante\n"
+                    + "4. Eliminar Estudiante\n"
+                    + "5. Volver al menú principal";
             opcionGestionEstudiantes = Integer.parseInt(JOptionPane.showInputDialog(menuEstudiantes));
 
             switch (opcionGestionEstudiantes) {
@@ -158,11 +158,11 @@ public class MainMenu {
 
         do {
             String menuEquipos = "GESTIÓN DE EQUIPOS\n\n"
-                    + "5.1 Registrar Equipo\n"
-                    + "5.2 Modificar Equipo\n"
-                    + "5.3 Buscar Equipo\n"
-                    + "5.4 Eliminar Equipo\n"
-                    + "5.5 Volver al menú principal";
+                    + "1. Registrar Equipo\n"
+                    + "2. Modificar Equipo\n"
+                    + "3. Buscar Equipo\n"
+                    + "4. Eliminar Equipo\n"
+                    + "5. Volver al menú principal";
             opcionGestionEquipos = Integer.parseInt(JOptionPane.showInputDialog(menuEquipos));
 
             switch (opcionGestionEquipos) {

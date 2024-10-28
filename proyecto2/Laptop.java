@@ -65,13 +65,11 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return "Laptop{" +
-                "serial='" + serial + '\'' +
-                ", marca='" + marca + '\'' +
-                ", tamano=" + tamano +
-                ", precio=" + precio +
-                ", sistemaOperativo='" + sistemaOperativo + '\'' +
-                ", procesador='" + procesador + '\'' +
-                '}';
+        return "\nSerial: " + serial + 
+                "\nMarca: " + marca +
+                "\nTamano: " + tamano +
+                "\nPrecio: " + precio +
+                "\nSistema Operativo: " + sistemaOperativo +
+                "\nProcesador: " + procesador;
     }
 }

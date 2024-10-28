@@ -65,13 +65,11 @@ public class Tableta {
 
     @Override
     public String toString() {
-        return "Tableta{" +
-                "serial='" + serial + '\'' +
-                ", marca='" + marca + '\'' +
-                ", tamano=" + tamano +
-                ", precio=" + precio +
-                ", almacenamiento='" + almacenamiento + '\'' +
-                ", peso=" + peso +
-                '}';
+        return "\nSerial: " + serial + 
+                "\nMarca: " + marca +
+                "\nTamano: " + tamano +
+                "\nPrecio: " + precio +
+                "\nSistema Operativo: " + almacenamiento +
+                "\nProcesador: " + peso;                
     }
 }
