@@ -1,0 +1,7 @@
+Cedula: 1234
+Nombre: sebastian
+Apellido: vidal
+Telefono: 323
+Serial: 2
+Cantidad Asignaturas: 5
+Modalidad de Estudio: virtual

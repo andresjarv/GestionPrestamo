@@ -1,0 +1,7 @@
+Cedula: 123
+Nombre: jorge
+Apellido: vidal
+Telefono: 315
+Serial: 1
+Semestre cursado: 4
+Promedio Acumulado: 2.0

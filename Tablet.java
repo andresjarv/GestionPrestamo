@@ -1,28 +1,29 @@
-/**
- * Tablet
- */
-public class Tablet extends Dispositivo{
+public class Tablet extends Dispositivo {
     
-    private String SistemaOperativo;
-    private String Procesador;  
-
-    public Tablet(String serial, String marca, float tamaño, float precio, String sistemaOperativo, String procesador) {
+    private String Almacenamiento;
+    private float Peso;
+   
+    public Tablet(String serial, String marca, float tamaño, float precio, String almacenamiento, float peso) {
         super(serial, marca, tamaño, precio);
-        SistemaOperativo = sistemaOperativo;
-        Procesador = procesador;
+        Almacenamiento = almacenamiento;
+        Peso = peso;
     }
-    public String getSistemaOperativo() {
-        return SistemaOperativo;
+    public String getAlmacenamiento() {
+        return Almacenamiento;
     }
-    public void setSistemaOperativo(String sistemaOperativo) {
-        SistemaOperativo = sistemaOperativo;
+    public void setAlmacenamiento(String almacenamiento) {
+        Almacenamiento = almacenamiento;
     }
-    public String getProcesador() {
-        return Procesador;
+    public float getPeso() {
+        return Peso;
     }
-    public void setProcesador(String procesador) {
-        Procesador = procesador;
+    public void setPeso(float peso) {
+        Peso = peso;
     }
 
-    
+    public void MostrarMaestro(){
+        super.MostrarMaestroD();
+        System.out.println("Almacenamiento: "+ Almacenamiento);
+        System.out.println("Peso: "+ Peso);
+    }
 }

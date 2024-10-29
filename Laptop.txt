@@ -1,0 +1,6 @@
+Serial: 2
+Nombre: huawei
+Apellido: 10.0
+Telefono: 567.0
+Serial: 2.0
+Cantidad Asignaturas: 256 GB
