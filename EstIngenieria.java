@@ -1,28 +1,30 @@
-public class EstIngenieria extends Estudiante{
-    private int semestre;
-    private Double promAcum;       
+public class EstIngenieria extends Estudiante {
+    
+    private int NumSemestreActual;
+    private float PromedioAcum;
 
-    public EstIngenieria(String cedula,String nombre,String apellido,String telefono,String serial,int semestre, Double promAcum) {
+    public EstIngenieria(String cedula, String nombre, String apellido, String telefono, String serial, int numSemestreActual, float promAcum){
         super(cedula, nombre, apellido, telefono, serial);
-        this.semestre = semestre;
-        this.promAcum = promAcum;
+        NumSemestreActual = numSemestreActual;
+        PromedioAcum = promAcum;
     }
 
-    public int getSemestre() {
-        return semestre;
+    public int getNumSemestreActual() {
+        return NumSemestreActual;
+    }
+    public void setNumSemestreActual(int numSemestreActual) {
+        NumSemestreActual = numSemestreActual;
+    }
+    public float getPromedioAcum() {
+        return PromedioAcum;
+    }
+    public void setPromedioAcum(float promedioAcum) {
+        PromedioAcum = promedioAcum;
     }
 
-    public void setSemestre(int semestre) {
-        this.semestre = semestre;
+    public void MostrarMaestro(){
+        super.MostrarMaestroE();
+        System.out.println("Semestre actual: "+ NumSemestreActual);
+        System.out.println("Promedio acomulado: "+ PromedioAcum);
     }
-
-    public double getPromAcum() {
-        return promAcum;
-    }
-
-    public void setPromAcum(Double promAcum) {
-        this.promAcum = promAcum;
-    }
-
-   
 }

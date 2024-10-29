@@ -1,29 +1,57 @@
 public class Estudiante {
-    private String cedula;
-    private String nombre;
-    private String apellido;
-    private String telefono;
-
-    public Estudiante(String cedula, String nombre, String apellido, String telefono) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
+    
+    private String Cedula;
+    private String Nombre;
+    private String Apellido;
+    private String Telefono;
+    private String Serial;
+    
+    public Estudiante(String cedula, String nombre, String apellido, String telefono, String serial) {
+        Cedula = cedula;
+        Nombre = nombre;
+        Apellido = apellido;
+        Telefono = telefono;
+        Serial = serial;
     }
 
     public String getCedula() {
-        return cedula;
+        return Cedula;
     }
-
+    public void setCedula(String cedula) {
+        Cedula = cedula;
+    }
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
-
+    public void setNombre(String nombre) {
+        Nombre = nombre;
+    }
     public String getApellido() {
-        return apellido;
+        return Apellido;
+    }
+    public void setApellido(String apellido) {
+        Apellido = apellido;
+    }
+    public String getTelefono() {
+        return Telefono;
+    }
+    public void setTelefono(String telefono) {
+        Telefono = telefono;
+    }
+    public String getSerial() {
+        return Serial;
+    }
+    public void setSerial(String serial) {
+        Serial = serial;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String MostrarMaestroE(){
+        String mensaje = "Cedula: "+ Cedula +"\n"+
+                    "Nombre: "+ Nombre +"\n"+
+                    "Apellido: "+ Apellido +"\n"+
+                    "Telefono: "+ Telefono +"\n"+
+                    "Serial: "+ Serial + "\n";
+        return mensaje;
     }
+    
 }
